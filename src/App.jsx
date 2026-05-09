@@ -8,10 +8,9 @@ function App() {
       </p>
 
       <img
-        className="hero"
-        src="https://placehold.co/600x300"
-        alt="Simba Supermarket"
-      />
+  src="https://images.unsplash.com/photo-1542838132-92c53300491e"
+  alt="Groceries"
+/>
     </>
   );
 }
