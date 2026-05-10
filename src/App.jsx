@@ -2,21 +2,38 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="container">
-      <h1 className="hero-title">
-        Karibu Simba Supermarket!
-      </h1>
+    <>
+      <nav className="navbar">
+        <h2 className="logo">Simba Supermarket</h2>
 
-      <p className="hero-text">
-        Fresh groceries, delivered across Kigali.
-      </p>
+        <div className="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Products</a>
+          <a href="#">Offers</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
 
-      <img
-        className="hero-image"
-        src="https://images.unsplash.com/photo-1542838132-92c53300491e"
-        alt="Supermarket"
-      />
-    </div>
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Karibu Simba Supermarket!</h1>
+
+          <p>
+            Fresh groceries, snacks, drinks, and household essentials
+            delivered across Kigali at lightning speed.
+          </p>
+
+          <button>Shop Now</button>
+        </div>
+
+        <div className="hero-image-container">
+          <img
+            src="https://images.unsplash.com/photo-1542838132-92c53300491e"
+            alt="Supermarket"
+          />
+        </div>
+      </section>
+    </>
   );
 }
 
