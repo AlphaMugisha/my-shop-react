@@ -125,3 +125,10 @@ body {
 
   object-fit: cover;
 }
+.footer {
+  text-align: center;
+  padding: 30px;
+
+  color: #6e6e73;
+  font-size: 0.95rem;
+}
