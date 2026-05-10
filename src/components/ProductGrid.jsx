@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./ProductGrid.css";
-import products from "../data/products";
+import ProductCard from "./ProductCard";
 
-const ProductGrid = () => {
+const ProductGrid = ({ products, onAddToCart }) => {
   const [visibleCount, setVisibleCount] = useState(3);
   const isExpanded = visibleCount >= products.length;
 
@@ -15,15 +15,11 @@ const ProductGrid = () => {
       <h2 className="section-title">Fresh from Simba</h2>
       <div className="product-grid">
         {products.slice(0, visibleCount).map((product) => (
-          <div key={product.id} className="product-card glass-panel">
-            <div className="product-icon">{product.icon}</div>
-            <span className="product-category">{product.category}</span>
-            <h3 className="product-name">{product.name}</h3>
-            <div className="product-footer">
-              <span className="product-price">RWF {product.price.toLocaleString()}</span>
-              <button className="btn-secondary small">Add to Cart</button>
-            </div>
-          </div>
+          <ProductCard 
+            key={product.id} 
+            product={product} 
+            onAddToCart={onAddToCart} 
+          />
         ))}
       </div>
       

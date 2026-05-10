@@ -3,6 +3,7 @@ import "./App.css";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import SearchBar from "./components/SearchBar";
 import ProductGrid from "./components/ProductGrid";
 import ProductCard from "./components/ProductCard";
 import Footer from "./components/Footer";
@@ -14,6 +15,9 @@ function App() {
 
   // Controls whether the featured product is visible
   const [showSpecial, setShowSpecial] = useState(false);
+
+  // Search query state
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Runs whenever theme changes
   useEffect(() => {
@@ -34,6 +38,10 @@ function App() {
     console.log("Added:", product.name);
   };
 
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="app-container">
       {/* Background Aesthetic Orbs */}
@@ -47,6 +55,9 @@ function App() {
       <main>
         {/* Hero Section */}
         <Hero />
+
+        {/* Search Bar */}
+        <SearchBar value={searchQuery} onChange={setSearchQuery} />
 
         {/* Today's Special Toggle */}
         <section className="special-section" style={{ textAlign: "center" }}>
@@ -65,7 +76,7 @@ function App() {
         </section>
 
         {/* Product Grid */}
-        <ProductGrid onAddToCart={handleAddToCart} />
+        <ProductGrid products={filteredProducts} onAddToCart={handleAddToCart} />
       </main>
 
       {/* Footer */}
