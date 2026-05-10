@@ -7,12 +7,12 @@ function ProductCard({ product }) {
   }).format(price);
 
   return (
-    <div className="product-card">
-      <img src={image} alt={name} />
+    <div className="product-card glass-panel" style={{ width: "300px", padding: "1rem" }}>
+      <img src={image} alt={name} style={{ width: "100%", borderRadius: "var(--radius-l)", marginBottom: "1rem" }} />
 
       <h3>{name}</h3>
 
-      <p>{formattedPrice}</p>
+      <p style={{ color: "var(--accent-color)", fontWeight: "bold" }}>{formattedPrice}</p>
     </div>
   );
 }

@@ -5,8 +5,8 @@ const Footer = () => {
     <footer className="footer glass-panel">
       <div className="footer-content">
         <div className="footer-brand">
-          <span className="logo">iOS 26 Shop</span>
-          <p>Defining the digital frontier.</p>
+          <span className="logo">Simba Shop</span>
+          <p>Fresh groceries delivered daily.</p>
         </div>
         <div className="footer-links">
           <div className="link-group">
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        &copy; 2026 iOS 26 Shop. All rights reserved.
+        &copy; 2026 Simba Shop. All rights reserved.
       </div>
     </footer>
   );
