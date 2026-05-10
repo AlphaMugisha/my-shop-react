@@ -1,29 +1,32 @@
-import "./Hero.css";
+import ProductCard from "./ProductCard";
+import products from "../data/products";
 
-const Hero = () => {
+function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1 className="hero-title">Spatial Assets for the <span className="gradient-text">Future.</span></h1>
-        <p className="hero-subtitle">
-          Experience the next generation of digital products designed for iOS 26.
-          High-fidelity assets for developers and creators.
+        <h1>Karibu Simba Supermarket!</h1>
+
+        <p>
+          Fresh groceries, snacks, drinks, and household essentials
+          delivered across Kigali at lightning speed.
         </p>
-        <div className="hero-actions">
-          <button className="btn-primary">Browse Collection</button>
-          <button className="btn-secondary">View Demo</button>
+
+        <button>Shop Now</button>
+
+        <div className="products-preview">
+          <ProductCard product={products[0]} />
         </div>
       </div>
-      <div className="hero-visual">
-        <div className="floating-card glass-panel">
-          <div className="card-inner">
-            <span>UI KIT</span>
-            <h3>v26.0</h3>
-          </div>
-        </div>
+
+      <div className="hero-image-container">
+        <img
+          src="https://images.unsplash.com/photo-1542838132-92c53300491e"
+          alt="Supermarket"
+        />
       </div>
     </section>
   );
-};
+}
 
 export default Hero;
