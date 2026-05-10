@@ -1,12 +1,20 @@
+import { useState } from "react";
 import "./ProductGrid.css";
 import products from "../data/products";
 
 const ProductGrid = () => {
+  const [visibleCount, setVisibleCount] = useState(3);
+  const isExpanded = visibleCount >= products.length;
+
+  const handleShowMore = () => {
+    setVisibleCount(prev => prev + 3);
+  };
+
   return (
     <section id="products" className="product-section">
       <h2 className="section-title">Fresh from Simba</h2>
       <div className="product-grid">
-        {products.map((product) => (
+        {products.slice(0, visibleCount).map((product) => (
           <div key={product.id} className="product-card glass-panel">
             <div className="product-icon">{product.icon}</div>
             <span className="product-category">{product.category}</span>
@@ -18,6 +26,15 @@ const ProductGrid = () => {
           </div>
         ))}
       </div>
+      
+      {!isExpanded && (
+        <div className="show-more-container">
+          <button className="btn-show-more glass-panel" onClick={handleShowMore}>
+            Show More Products
+            <span className="arrow-down">↓</span>
+          </button>
+        </div>
+      )}
     </section>
   );
 };
