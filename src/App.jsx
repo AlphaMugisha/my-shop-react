@@ -1,17 +1,22 @@
+import "./App.css";
+
 function App() {
   return (
-    <>
-      <h1 className="hero">Karibu Simba Supermarket!</h1>
+    <div className="container">
+      <h1 className="hero-title">
+        Karibu Simba Supermarket!
+      </h1>
 
-      <p className="hero">
+      <p className="hero-text">
         Fresh groceries, delivered across Kigali.
       </p>
 
       <img
-  src="https://images.unsplash.com/photo-1542838132-92c53300491e"
-  alt="Groceries"
-/>
-    </>
+        className="hero-image"
+        src="https://images.unsplash.com/photo-1542838132-92c53300491e"
+        alt="Supermarket"
+      />
+    </div>
   );
 }
 
