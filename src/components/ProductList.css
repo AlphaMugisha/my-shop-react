@@ -1,0 +1,18 @@
+.product-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+@media (min-width: 1024px) {
+  .product-list-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Ensure cards fit the grid well */
+.product-list-grid .product-card {
+  width: 100% !important;
+  box-sizing: border-box;
+}

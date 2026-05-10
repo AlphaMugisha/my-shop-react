@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import SearchBar from "./components/SearchBar";
-import ProductGrid from "./components/ProductGrid";
+import ProductList from "./components/ProductList";
 import ProductCard from "./components/ProductCard";
 import Footer from "./components/Footer";
 import products from "./data/products";
@@ -75,8 +75,8 @@ function App() {
           )}
         </section>
 
-        {/* Product Grid */}
-        <ProductGrid products={filteredProducts} onAddToCart={handleAddToCart} />
+        {/* Product List */}
+        <ProductList products={filteredProducts} onAddToCart={handleAddToCart} />
       </main>
 
       {/* Footer */}
