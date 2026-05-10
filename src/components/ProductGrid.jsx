@@ -1,4 +1,3 @@
-import React from "react";
 import "./ProductGrid.css";
 
 const products = [
