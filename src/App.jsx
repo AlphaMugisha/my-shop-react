@@ -30,6 +30,10 @@ function App() {
     setShowSpecial(!showSpecial);
   };
 
+  const handleAddToCart = (product) => {
+    console.log("Added:", product.name);
+  };
+
   return (
     <div className="app-container">
       {/* Background Aesthetic Orbs */}
@@ -55,13 +59,13 @@ function App() {
           
           {showSpecial && (
             <div style={{ display: "flex", justifyContent: "center" }}>
-              <ProductCard product={products[0]} />
+              <ProductCard product={products[0]} onAddToCart={handleAddToCart} />
             </div>
           )}
         </section>
 
         {/* Product Grid */}
-        <ProductGrid />
+        <ProductGrid onAddToCart={handleAddToCart} />
       </main>
 
       {/* Footer */}
