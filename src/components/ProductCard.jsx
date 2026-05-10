@@ -16,7 +16,7 @@ function ProductCard({ product, onAddToCart }) {
       
       <button 
         className="btn-primary" 
-        style={{ width: "100%", marginTop: "1rem" }}
+        style={{ width: "100%", marginTop: "1rem"}}
         onClick={() => onAddToCart(product)}
       >
         Add to cart
