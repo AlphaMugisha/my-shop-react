@@ -18,7 +18,7 @@
   background: linear-gradient(135deg, var(--accent-color), var(--accent-purple), var(--accent-pink));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 30px rgba(56, 189, 248, 0.3));
+  filter: drop-shadow(0 10px 20px rgba(99, 102, 241, 0.2));
 }
 
 .hero-subtitle {

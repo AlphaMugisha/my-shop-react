@@ -7,16 +7,16 @@ function ProductCard({ product, onAddToCart }) {
   }).format(price);
 
   return (
-    <div className="product-card glass-panel" style={{ width: "300px", padding: "1rem" }}>
-      <img src={image} alt={name} style={{ width: "100%", borderRadius: "var(--radius-l)", marginBottom: "1rem" }} />
+    <div className="product-card glass-panel">
+      <img src={image} alt={name} className="product-img" />
 
-      <h3>{name}</h3>
+      <h3 className="product-name">{name}</h3>
 
-      <p style={{ color: "var(--accent-color)", fontWeight: "bold" }}>{formattedPrice}</p>
+      <p className="product-price">{formattedPrice}</p>
       
       <button 
         className="btn-primary" 
-        style={{ width: "100%", marginTop: "1rem"}}
+        style={{ width: "100%", marginTop: "auto"}}
         onClick={() => onAddToCart(product)}
       >
         Add to cart
