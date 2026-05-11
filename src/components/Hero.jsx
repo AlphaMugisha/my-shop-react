@@ -27,6 +27,7 @@ const Hero = () => {
             <span>FRESH DAILY</span>
           </div>
         </div>
+        
       </div>
     </section>
   );
