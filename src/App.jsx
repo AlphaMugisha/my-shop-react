@@ -1,88 +1,9 @@
-import { useState, useEffect } from "react";
-import "./App.css";
-
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import SearchBar from "./components/SearchBar";
-import ProductList from "./components/ProductList";
-import ProductCard from "./components/ProductCard";
-import Footer from "./components/Footer";
-import products from "./data/products";
-
-function App() {
-  // Stores the current theme
-  const [theme, setTheme] = useState("dark");
-
-  // Controls whether the featured product is visible
-  const [showSpecial, setShowSpecial] = useState(false);
-
-  // Search query state
-  const [searchQuery, setSearchQuery] = useState("");
-
-  // Runs whenever theme changes
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
-
-  // Switch between dark and light mode
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
-  // Toggle featured product visibility
-  const toggleSpecial = () => {
-    setShowSpecial(!showSpecial);
-  };
-
-  const handleAddToCart = (product) => {
-    console.log("Added:", product.name);
-  };
-
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  return (
-    <div className="app-container">
-      {/* Background Aesthetic Orbs */}
-      <div className="bg-orb orb-1"></div>
-      <div className="bg-orb orb-2"></div>
-      <div className="bg-orb orb-3"></div>
-
-      {/* Navbar */}
-      <Header toggleTheme={toggleTheme} theme={theme} />
-
-      <main>
-        {/* Hero Section */}
-        <Hero />
-
-        {/* Search Bar */}
-        <SearchBar value={searchQuery} onChange={setSearchQuery} />
-
-        {/* Today's Special Toggle */}
-        <section className="special-section" style={{ textAlign: "center" }}>
-          <h2>Today's Special</h2>
-          <button className="btn-primary" onClick={toggleSpecial} style={{ marginBottom: "2rem" }}>
-            {showSpecial
-              ? "Hide Today's Special"
-              : "Show Today's Special"}
-          </button>
-          
-          {showSpecial && (
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <ProductCard product={products[0]} onAddToCart={handleAddToCart} />
-            </div>
-          )}
-        </section>
-
-        {/* Product List */}
-        <ProductList products={filteredProducts} onAddToCart={handleAddToCart} />
-      </main>
-
-      {/* Footer */}
-      <Footer />
-    </div>
-  );
+import TestFunction from "./components/react";
+export default function App2() {
+    return (
+        <div>
+            <h1>Testing API Fetch</h1>
+            <TestFunction />
+        </div>
+    );
 }
-
-export default App;
