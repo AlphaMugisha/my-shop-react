@@ -3,6 +3,10 @@
   margin-bottom: 2rem;
   padding: 4rem;
   border-radius: var(--radius-xl);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
 }
 
 .footer-content {
