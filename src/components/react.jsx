@@ -27,7 +27,6 @@ const TestFunction = () => { // Components should start with a Capital Letter
         fetchProducts();
     }, []);
 
-    // Remember to return your JSX here!
     return (
         <div>
             {loading ? <p>Loading...</p> : (
